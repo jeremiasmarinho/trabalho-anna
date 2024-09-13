@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racionamento de Água em Araguaína</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      header {
+        background-color: #0077be;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+      nav {
+        background-color: #f4f4f4;
+        padding: 0.5rem;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav ul li {
+        display: inline;
+        margin-right: 10px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+      main {
+        padding: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Racionamento de Água em Araguaína</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#schedule">Cronograma</a></li>
+        <li><a href="#tips">Dicas de Economia</a></li>
+        <li><a href="#faq">Perguntas Frequentes</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
+    <main id="home">
+      <h2>Bem-vindo ao Portal de Informações sobre Racionamento de Água</h2>
+      <img
+        src="https://cdn.pixabay.com/photo/2016/12/05/19/49/siphon-1884521_1280.jpg"
+        alt="Torneira com gota d'água"
+      />
+      <p>
+        Bem-vindo ao site oficial de informações sobre o racionamento de água em
+        Araguaína. Aqui você encontrará informações importantes sobre o
+        cronograma de racionamento, dicas para economizar água e respostas para
+        perguntas frequentes.
+      </p>
+    </main>
+    <main id="schedule" style="display: none">
+      <h2>Cronograma de Racionamento</h2>
+      <img
+        src="https://cdn.pixabay.com/photo/2012/04/15/20/36/water-35081_1280.png"
+        alt="Símbolo de água"
+      />
+      <p>
+        Confira abaixo o cronograma de racionamento para cada região da cidade:
+      </p>
+      <ul>
+        <li>Zona Norte: Segunda e Quinta, das 8h às 18h</li>
+        <li>Zona Sul: Terça e Sexta, das 8h às 18h</li>
+        <li>Zona Leste: Quarta e Sábado, das 8h às 18h</li>
+        <li>Zona Oeste: Quinta e Domingo, das 8h às 18h</li>
+      </ul>
+    </main>
+    <main id="tips" style="display: none">
+      <h2>Dicas para Economizar Água</h2>
+      <img
+        src="https://cdn.pixabay.com/photo/2017/06/29/20/09/water-2456160_1280.jpg"
+        alt="Gotas de água"
+      />
+      <ul>
+        <li>Feche a torneira enquanto escova os dentes</li>
+        <li>Tome banhos mais curtos</li>
+        <li>Reuse a água da máquina de lavar para limpar calçadas</li>
+        <li>Conserte vazamentos imediatamente</li>
+        <li>Use a descarga do vaso sanitário apenas quando necessário</li>
+      </ul>
+    </main>
+    <main id="faq" style="display: none">
+      <h2>Perguntas Frequentes</h2>
+      <img
+        src="https://cdn.pixabay.com/photo/2018/01/30/14/28/faq-3118938_1280.jpg"
+        alt="FAQ"
+      />
+      <dl>
+        <dt>Por que o racionamento é necessário?</dt>
+        <dd>
+          O racionamento é necessário devido à escassez de chuvas e ao baixo
+          nível dos reservatórios de água da cidade.
+        </dd>
+        <dt>Quanto tempo vai durar o racionamento?</dt>
+        <dd>
+          A duração do racionamento dependerá das condições climáticas e do
+          nível dos reservatórios. Atualizaremos esta informação regularmente.
+        </dd>
+        <dt>Como posso me preparar para os períodos de racionamento?</dt>
+        <dd>
+          Armazene água em recipientes limpos durante os períodos em que o
+          fornecimento estiver disponível e siga nossas dicas de economia de
+          água.
+        </dd>
+      </dl>
+    </main>
+    <main id="contact" style="display: none">
+      <h2>Entre em Contato</h2>
+      <img
+        src="https://cdn.pixabay.com/photo/2016/12/15/12/24/contact-us-1908762_1280.png"
+        alt="Ícones de contato"
+      />
+      <p>
+        Para mais informações ou em caso de emergências, entre em contato
+        conosco:
+      </p>
+      <ul>
+        <li>Telefone: (63) 3411-7000</li>
+        <li>Email: agua@araguaina.to.gov.br</li>
+        <li>
+          Endereço: Rua 25 de Dezembro, 265 - Centro, Araguaína - TO, 77803-040
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <p>&copy; 2024 Prefeitura de Araguaína. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav a");
+        const mainSections = document.querySelectorAll("main");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").slice(1);
+            mainSections.forEach((section) => {
+              section.style.display =
+                section.id === targetId ? "block" : "none";
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
